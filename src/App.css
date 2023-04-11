@@ -39,3 +39,126 @@
     transform: rotate(360deg);
   }
 }
+html,body {
+    height: 100%;
+}
+
+.sidebar {
+
+  vertical-align: middle;
+ height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+}
+
+.sidebar .logo-img i {
+
+    font-size: 30px;
+    color: #fff;
+    margin: 10px 15px;
+    float: left;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+
+
+}
+
+.sidebar, body>.navbar-collapse {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    font-weight: 200;
+    background-size: cover;
+    background-position: 50%
+}
+
+
+
+
+
+.sidebar .logo,body>.navbar-collapse .logo ,.tools {
+    padding: 10px 15px 9px;
+    position: relative;
+    z-index: 4
+}
+
+.sidebar .nav,body>.navbar-collapse .nav {
+    margin-top: 20px;
+    float: none;
+    display: block
+}
+
+.sidebar .nav li .nav-link, body>.navbar-collapse .nav li .nav-link {
+    color: #fff;
+    margin: 5px 15px;
+    opacity: .86;
+    border-radius: 4px;
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.sidebar .nav li .nav-link:hover,body>.navbar-collapse .nav li .nav-link:hover {
+    background: hsla(0,0%,100%,.13);
+    opacity: 1
+}
+
+.sidebar .nav li .nav-link p,body>.navbar-collapse .nav li .nav-link p {
+    margin: 0;
+    line-height: 31px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex
+}
+
+.sidebar .nav li .nav-link i,body>.navbar-collapse .nav li .nav-link i {
+    font-size: 28px;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    float: left
+}
+
+.sidebar .nav li:hover .nav-link,body>.navbar-collapse .nav li:hover .nav-link {
+    background: hsla(0,0%,100%,.13);
+    opacity: 1
+}
+
+.sidebar .nav li.active .nav-link ,body>.navbar-collapse .nav li.active .nav-link {
+    color: #fff;
+    opacity: 1;
+    background: hsla(0,0%,100%,.23)
+}
+.sidebar .nav a.active  {
+    color: #fff;
+    opacity: 1;
+    background: hsla(0,0%,100%,.23)
+}
+
+.logo .simple-text {
+    text-transform: uppercase;
+    padding: 5px 0;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    line-height: 30px;
+}
+.logo a:link {
+    text-decoration: none;
+}

@@ -1,0 +1,75 @@
+name: ASCII
+description: ASCII
+font: any
+glyphs:
+  - codepoint: 0x00
+    name: NUL
+    description: Null
+    width: 1
+  - codepoint: 0x01
+    name: SOH
+    description: Start of Heading
+    width: 1
+  - codepoint: 0x02
+    name: STX
+    description: Start of Text
+    width: 1
+  - codepoint: 0x03
+    name: ETX
+    description: End of Text
+    width: 1
+  - codepoint: 0x04
+    name: EOT
+    description: End of Transmission
+    width: 1
+  - codepoint: 0x05
+    name: ENQ
+    description: Enquiry
+    width: 1
+  - codepoint: 0x06
+    name: ACK
+    description: Acknowledge
+    width: 1
+  - codepoint: 0x07
+    name: BEL
+    description: Bell
+    width: 1
+  - codepoint: 0x08
+    name: BS
+    description: Backspace
+    width: 1
+  - codepoint: 0x09
+    name: HT
+    description: Horizontal Tab
+    width: 1
+  - codepoint: 0x0A
+    name: LF
+    description: Line Feed
+    width: 1
+  - codepoint: 0x0B
+    name: VT
+    description: Vertical Tab
+    width: 1
+  - codepoint: 0x0C
+    name: FF
+    description: Form Feed
+    width: 1
+  - codepoint: 0x0D
+    name: CR
+    description: Carriage Return
+    width: 1
+  - codepoint: 0x0E
+    name: SO
+    description: Shift Out
+    width: 1
+  - codepoint: 0x0F
+    name: SI
+    description: Shift In
+    width: 1
+  - codepoint: 0x10
+    name: DLE
+    description: Data Link Escape
+    width: 1
+  - codepoint: 0x11
+    name: DC1
+    description: Device Control 1
