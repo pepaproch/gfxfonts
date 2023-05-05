@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Font } from 'fontkit';
-import FontParser from './FontParser';
+import FontParser from '../FontParser';
 import { Button, Modal } from 'react-bootstrap';
 
 export interface IFile {

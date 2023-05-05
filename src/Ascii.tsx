@@ -4,7 +4,7 @@ import {
 } from 'fast-printf';
 import {Action, filterReducer} from "./Reducer";
 import {Font} from "fontkit";
-import {FontRender} from "./FontRender";
+import {FontRender} from "./components/FontRender";
 interface  AsciiProps {
     gfx:boolean
     handleAddFilterCharacters:any
@@ -70,7 +70,7 @@ export const AsciiTable: React.FC<AsciiProps> = (props) => {
                                     const css  =  props.uniqChars && props.uniqChars.has(idx) ? "selected" : ""
                                     return (<td className={css} key={"b_" +idx }>
                                         { props.font && props.gfx &&
-                                            <FontRender key={"b_" +idx } font={props.font} content={String.fromCharCode(idx)} fontSize={30} width={30} height={30}></FontRender> }
+                                            <FontRender key={"b_" +idx } font={props.font} content={String.fromCharCode(idx + 59648)} fontSize={30} width={30} height={30}></FontRender> }
                                </td>)
                                 })
                         }

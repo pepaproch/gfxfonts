@@ -59,7 +59,7 @@ const GlyphsTable: React.FC<GlyphsTableProps> = (props: GlyphsTableProps) => {
             {
                 Array(numRows).fill(0).map((item, row) => {
                     return (
-                        <tr>
+                        <tr key={row}>
                             {
                                 Array(props.columns).fill(0).map((item, index) => {
                                     const code = props.codes[(row * props.columns) + index];
@@ -68,8 +68,7 @@ const GlyphsTable: React.FC<GlyphsTableProps> = (props: GlyphsTableProps) => {
                                      const char =   code !== undefined ? String.fromCharCode(code) : ''
 
                                     return (
-                                        <td>
-
+                                        <td key={row + index}>
                                             <FontRender width={30} height={30} content={char} font={font}/>
                                         </td>
                                     )

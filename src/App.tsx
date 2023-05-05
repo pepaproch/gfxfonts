@@ -4,10 +4,11 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Provider } from 'react-redux';
-import { appStore } from './Store';
+import { appStore } from './store/Store';
 import { Font } from 'fontkit';
-import { FontsPreview } from './FontsPreview';
+import { FontsPreview } from './pages/FontsPreview';
 import { NavLink, Route, Routes } from 'react-router-dom';
+import {Content} from "./pages/content";
 
 function App() {
 
@@ -38,45 +39,7 @@ function App() {
 
     return (
         <Provider store={appStore}>
-            <Container fluid className={'wrapper'}>
-                <Row>
-                    <Col sm={3}>
-                        <div className="sidebar">
-                            <div className="sidebar-wrapper">
-                                <div className="logo d-flex align-items-center justify-content-start">
-                                    <div className="logo-img">
-                                        <i className={'fa-solid fa-blender'}/>
-                                    </div>
-
-                                    <a className="simple-text" href="/">
-                                        Font Mixer
-                                    </a>
-
-                                </div>
-                                 <hr/>
-                                <Nav defaultActiveKey="/" className="flex-column">
-                                    <li><NavLink className={"nav-link"} to="/fonts"><p>Fonts</p></NavLink></li>
-                                    <li><NavLink className={"nav-link"} to="/codes"><p>Codes Mapping</p></NavLink></li>
-                                    <li><NavLink className={"nav-link"}  to="/output"><p>Output</p></NavLink></li>
-                                </Nav>
-
-                            </div>
-                        </div>
-                    </Col>
-                    <Col sm={9}>
-                        <Routes>
-                            <Route path='/' element={<h1>H</h1>} />
-                            <Route path='/fonts' element={<FontsPreview handleSetAvailableFonts={handleSetAvailableFonts} availableFonts={availableFonts} />} />
-                            <Route path='/codes' element={<h1>C</h1>} />
-                        </Routes>
-
-
-
-                    </Col>
-
-                </Row>
-                <div className="clear"/>
-            </Container>
+        <Content handleSetAvailableFonts={handleSetAvailableFonts} availableFonts={availableFonts} />
         </Provider>
 
     );

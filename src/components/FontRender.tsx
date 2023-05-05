@@ -20,6 +20,7 @@ export const FontRender: React.FC<FontRenderProps> = (props) => {
         ctx.clearRect(0, 0, props.width, props.height);
         // iterate text runs
         console.log("content" , props.content)
+        try {
         let run = props.font.layout(props.content ,  );
 
         let scale = 1 / props.font.unitsPerEm * (props.fontSize || 30);
@@ -32,7 +33,11 @@ export const FontRender: React.FC<FontRenderProps> = (props) => {
         ctx.translate(0,30);
         ctx.scale(1, -1);
        // ctx.rotate(9)
+
         run.glyphs.forEach((glyph, index) => {
+
+
+
             let pos = run.positions[index];
             console.log("pos",pos);
             ctx.save();
@@ -45,7 +50,11 @@ export const FontRender: React.FC<FontRenderProps> = (props) => {
             x += (pos.xAdvance + 10 );
             y += pos.yAdvance;
 
+
         });
+        } catch (e) {
+            console.log("error" , e)
+        }
         ctx.restore();
 
     }
@@ -54,7 +63,7 @@ export const FontRender: React.FC<FontRenderProps> = (props) => {
     const canvasRef = React.useRef<HTMLCanvasElement>(null);
     useEffect(() => {
         if (canvasRef.current) {
-            console.log(`hookRef div width: ${canvasRef.current.clientWidth}`);
+           /// console.log(`hookRef div width: ${canvasRef.current.clientWidth}`);
             renderText(canvasRef.current.getContext('2d'))
         }
     });

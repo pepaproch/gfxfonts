@@ -1,32 +1,23 @@
 import React from 'react';
-import { FontUpload } from './FontUpload';
+
 import { Alert, Col, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import { FontRender } from './FontRender';
+import { FontRender } from '../components/FontRender';
 import { Font } from 'fontkit';
-import GlyphsPreview from './GlyphsPreview';
+import GlyphsPreview from '../components/GlyphsPreview';
 
-interface FontsPreview {
-    handleSetAvailableFonts: (fonts:Font[])=>void;
+interface FontsPreviewProps {
+
     availableFonts:Font[]
 }
 
-export const FontsPreview: React.FC<FontsPreview> = (props) => {
+export const FontsPreview: React.FC<FontsPreviewProps> = (props) => {
 
 
     return (
         <div className={'container-fluid mb-3'}>
-            <div className={'tools'}>
-                <div className={'row'}>
 
-                    <div className={'col-9'} ></div>
 
-                    <div className={'col-3'}>
-                        <FontUpload  handleAddFonts={props.handleSetAvailableFonts}/>
-                    </div>
-                </div>
-            </div>
-            <hr/>
             {
                 props.availableFonts.length<1 && <Alert variant="success">
                     <Alert.Heading>Upload a font to get started</Alert.Heading>
@@ -42,7 +33,7 @@ export const FontsPreview: React.FC<FontsPreview> = (props) => {
                 {
                     props.availableFonts.map((font, index) => {
                         return (
-                            <Col>
+                            <Col key={index}>
                                 <Card border="light"   key={index} >
                                     <Card.Header>
                                         <Row>
